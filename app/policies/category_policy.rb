@@ -15,7 +15,7 @@ class CategoryPolicy < ApplicationPolicy
   end
 
   def index?
-    user.admin?
+    user&.admin?
   end
 
   def create?
